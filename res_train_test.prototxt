@@ -10,10 +10,10 @@ layer {
   transform_param {
     mirror: false
     crop_size: 28
-    mean_file: "/srv/dataset/num_mean.binaryproto"
+    mean_file: "/srv/dataset/mc2016/mc2016_mean.binaryproto"
   }
   data_param {
-    source: "/srv/dataset/train_lmdb"
+    source: "/srv/dataset/mc2016/mc2016_train_lmdb"
     batch_size: 64
     backend: LMDB
   }
@@ -29,11 +29,11 @@ layer {
   transform_param {
     mirror: false
     crop_size: 28
-    mean_file: "/srv/dataset/num_mean.binaryproto"
+    mean_file: "/srv/dataset/mc2016/mc2016_mean.binaryproto"
   }
   data_param {
-    source: "/srv/dataset/test_lmdb"
-    batch_size: 60
+    source: "/srv/dataset/mc2016/mc2016_val_lmdb"
+    batch_size: 98
     backend: LMDB
   }
 }
